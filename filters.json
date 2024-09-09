@@ -1,0 +1,16 @@
+{
+  "batches": ["S24", "W24", "S23", "W23"],
+  "industries": {
+    "B2B": [
+      "Analytics",
+      "Engineering, Product and Design",
+      "Infrastructure",
+      "Productivity",
+      "Security",
+      "Supply Chain and Logistics"
+    ],
+    "Healthcare": ["Healthcare IT", "Medical Devices"],
+    "Real Estate and Construction": ["Housing and Real Estate"]
+  },
+  "regions": ["Anywhere", "America/Canada", "Remote", "Europe"]
+}
