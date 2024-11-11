@@ -4,11 +4,21 @@ import Company from "../models/Company";
  * Retrieves all companies from the database.
  *
  * @function getAllCompaniesService
- * @returns {Promise<Company[]>} - A promise that resolves to an array of all companies.
+ * @returns {Promise<{Company[], number}>} - A promise that resolves to an array of all companies.
  */
-export const getAllCompaniesService = async () => {
-  const allTheCompanies = await Company.findAll();
-  return allTheCompanies;
+export const getAllCompaniesService = async (
+  page: number,
+  limit: number
+): Promise<{ allTheCompanies: Company[]; totalPages: number }> => {
+  const offset = (page - 1) * limit;
+  const { rows: allTheCompanies, count: totalItems } =
+    await Company.findAndCountAll({
+      limit,
+      offset,
+    });
+
+  const totalPages = Math.ceil(totalItems / limit);
+  return { allTheCompanies, totalPages };
 };
 
 /**

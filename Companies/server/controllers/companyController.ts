@@ -23,8 +23,14 @@ export const getAllCompanies = async (
   next: NextFunction
 ) => {
   try {
-    const allThecompanies = await getAllCompaniesService();
-    return res.status(200).json(allThecompanies);
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = parseInt(req.query.limit as string) || 15;
+
+    const { allTheCompanies, totalPages } = await getAllCompaniesService(
+      page,
+      limit
+    );
+    return res.status(200).json({ allTheCompanies, totalPages });
   } catch (error) {
     next(error);
   }

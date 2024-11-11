@@ -7,11 +7,13 @@ import { scoresRouter } from "./routers/scoresRouter";
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const dotenv = require("dotenv").config();
+const cors = require("cors");
 
 const PORT = process.env.PORT || 1001;
 
 const app = express();
 
+app.use(cors({ origin: "http://localhost:5173" }));
 app.use(cookieParser());
 app.use(express.json());
 

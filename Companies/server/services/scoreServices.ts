@@ -6,9 +6,17 @@ import Score from "../models/Score";
  * @function getAllScoresService
  * @returns {Promise<Score[]>} - A promise that resolves to an array of all companies.
  */
-export const getAllScoresService = async () => {
-  const allTheScores = await Score.findAll();
-  return allTheScores;
+export const getAllScoresService = async (page: number, limit: number) => {
+  const offset = (page - 1) * limit;
+  const { rows: allTheScores, count: totalitems } = await Score.findAndCountAll(
+    {
+      limit,
+      offset,
+    }
+  );
+
+  const totalPages = Math.ceil(totalitems / limit);
+  return { allTheScores, totalPages };
 };
 
 /**

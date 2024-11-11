@@ -21,8 +21,11 @@ export const getAllScores = async (
   next: NextFunction
 ) => {
   try {
-    const allTheScores = await getAllScoresService();
-    return res.status(200).json(allTheScores);
+    const page = parseInt(req.query.page as string) || 1;
+    const limit = parseInt(req.query.limit as string) || 15;
+
+    const { allTheScores, totalPages } = await getAllScoresService(page, limit);
+    return res.status(200).json({ allTheScores, totalPages });
   } catch (error) {
     next(error);
   }
