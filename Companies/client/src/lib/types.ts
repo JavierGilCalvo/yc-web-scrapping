@@ -36,6 +36,7 @@ export type CompanyList = Company[];
 export interface Company {
   id: number;
   name: string;
+  logoUrl: string;
   industries: string;
   fullDescription: string;
   description: string;

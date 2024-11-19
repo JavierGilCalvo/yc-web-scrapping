@@ -1,0 +1,41 @@
+[
+  {
+    "domain": "www.crunchbase.com",
+    "expirationDate": 1731506904.999157,
+    "hostOnly": true,
+    "httpOnly": false,
+    "name": "trustcookie",
+    "path": "/",
+    "sameSite": "lax",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "eyJraWQiOiJjcnVuY2hiYXNlIiwiYWxnIjoiUlMyNTYifQ.eyJqdGkiOiI5ZjNiZDdiMC00N2RkLTQyNjAtYmFlOC04ZGFhYjdiZTJiNGQiLCJpc3MiOiJ1c2Vyc2VydmljZV9hYzk4MjI0Y18xIiwic3ViIjoiZjgzOTcxODctZDhkOS00NzM2LTk4ZTUtNGNjMjkwNTQxYjgwIiwiZXhwIjoxNzMxNTA2OTA1LCJpYXQiOjE3MzE0MjA1MDUsInNjciI6MH0.KbRN7rlHhUo5M68bM6gz7ZNrad1mbSmGoB_CNg5g9sXRhgVlt7Ec5bA_RoCjiLKmfZjNNIQKlV_on5zZHKoKt-X2-HVdq4Gi7qC17AqTFJ13WHafqMixrmSvtd44eQedWP1ny-YGn-vwc1GkWfHw4Tluikm1pDSDfMLriYAluW8R8kR6f4BDWo4P9rg4oiDZizXFntMOMusxJL7eyk2lx2Pju3DoXiFf1ecHNzL0GmgVcXFhnlhtxoDjE5lQu35mF04s1xEJCXFXmsnyPHEZMMzM1OCeaNOt49BlHigE1L9LxvDg7GR5VG9I7pVrRKpw6UhDvmK_UgQEbW9YpOHh_Q"
+  },
+  {
+    "domain": ".crunchbase.com",
+    "expirationDate": 1731421520.112322,
+    "hostOnly": false,
+    "httpOnly": true,
+    "name": "__cf_bm",
+    "path": "/",
+    "sameSite": "no_restriction",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "1O.3f9TK776DVzIIjXXhRO5qgbJ9spurXdB8Ve3ZYes-1731419718-1.0.1.1-ScjHhWsbhVAvug26KvD8HF6m60CRiBXYV3P7p0rsyjF6LHor83qLcfjtJSSv.V6VCAOYdYmW.aQrF2EC_UQt0g"
+  },
+  {
+    "domain": "www.crunchbase.com",
+    "expirationDate": 1746972504.999073,
+    "hostOnly": true,
+    "httpOnly": false,
+    "name": "authcookie",
+    "path": "/",
+    "sameSite": "lax",
+    "secure": true,
+    "session": false,
+    "storeId": null,
+    "value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI5ZjNiZDdiMC00N2RkLTQyNjAtYmFlOC04ZGFhYjdiZTJiNGQiLCJpc3MiOiJ1c2Vyc2VydmljZV9hYzk4MjI0Y18xIiwic3ViIjoiZjgzOTcxODctZDhkOS00NzM2LTk4ZTUtNGNjMjkwNTQxYjgwIiwiZXhwIjoxNzMxNDIwODA1LCJpYXQiOjE3MzE0MjA1MDUsInByaXZhdGUiOiJYQW1UU3NleXp1bFo1bkROQU55STkwaEFMZFVUaUlCcEswZU1BZE1ja3ZYbGRVSDdvRlg2T2N3Q0YvK0dHL1U1L2YyUFo2d2lNT3dRaGpubGFpNnRIVGN3U05PdmpQTWcxSW1yMFBqT25tUXowQjdZR2lORkRsbFM1NFFUdFF2SXZ4ODBVcGpqNHNLWEtkSmZ2Q2hWZDNNZ1BwdDk1bHE1SzQySjVnV1NJTFVHTW40NEpRRTRNWld1NG1XaUE3ejlsRHBna01mOXFnRXF0QnUrQjVZTXFvTTYrSG1CNU9nYi95SUxoOHdZRDVzWlVlWDl4blQ4RWtRclhpK09RWE5ITUtueGxqQzNaVUFtNFg5NlAxVUZOODFJWVpMMU1DdXJUb00vQ3dMNHFFRXh6am9lMzI4ZGdSR0FzZkhWUGFITEVhNGEydTVrK3dXZnV5Y3VrbUtWN3NUb1lGNGxkNWNseGI3WTBXTTUrYnBndUx5elpLNDFpTk9ucTJMUEF0Qk0rRFErTEZweHdjamVKQzhaSGlCallNNkU0MUNTdkJycG9lSVQySFFoZUJLVnVMVWFzZTBTeWUxaGU3dlVKR0FucG1NVzlXZXB4QkIrOEx4cXRLZGpnVDhOb0RSaDBmL29wRXNFc1lQdnJYeWg1Ty92NEpFekpFSCtCYllQL0ZDU0VpSklxOHlmaWp2Mkp2YnBtZSs1YkRidnZhYzRGODVyTW5kUmpFYnVBVzlGa2ljQWFBSGNHK0U4b0NvNEtBWDVENGtiNDN6Um9JOGRGdGM0OFBTZzVMWkhpc3BlQ0dGMUZHNzAxVVlSbXBXbGEzb281Y1lWemRHSWFyeE90am1GV0dJRzAvU3JxdlRwWWpvSWRCL3FvRVhhQUpLUDQxQnhGc1FjNUlYaGFUU0RQMHAxR2l4blJyRnlLeE8wbzFzSHpia1lEMVJpRE9tOS9hbnFNbE52REluS0s3UWFVZlVQOXdPU2tCS0pEdEdQaXhBMWRMdFVTcGtuN055azJzVTVlWFh2dnpnT1gvWmJleThYanZQY1dqSDVTTCtIVXBvMk5mZElMWHdxdGdiMkdZaFNKVWZWbk83dnVZNHMvTWFaWW4xVGs5VU9VN3dBU1NrV2JDYm9TWm42U0poZyswRGVTejFSVllNYUQvMGdTUmYrNWtNRkJBZHBTa1FkbWhrak1BTXMrVmFZSXVMbE8va2hPYkU2M2RXQktZUlQrTndvblBHK0RPNlplTVA0MDdzcXdNdEtRVGMrcXRTL3ZHcXJyZ2M0NDZ2TVVBMjIwQlF5dzVvbEhmSjAwY2NQcE9kSGVnYTYzSkRlVkdXdW1NUWtHOVVnUW51Wmc3d2lWNmVaUGhlSGpRK1U0M3puamJUZXQ3K09Oc2w0MXBEUTQ1WVdKb2pockd4QitTM2tRbERkVWtpWTFhd09pYU9Cb3BsRlZYUVJ3Sm1Hc21XaXRlQjBvTzR3aXNhQzN0elZJb1NyUHFkRWRoeVlubFkvdWtCNnIzUXJUMnJnblU4ODlCVGciLCJwdWJsaWMiOnsic2Vzc2lvbl9oYXNoIjoiLTEzMTMyNjc2NDUifX0.ACr8razXAESXhYTgcmKtK1ok0pL5myIks6k9IgyBDv_9NVhLaWNHHI7DuTtGOvRn8-YIh-ySRyg-P7m_0m3aMQ"
+  }
+]

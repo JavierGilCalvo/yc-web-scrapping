@@ -24,7 +24,7 @@ export const getAllCompanies = async (
 ) => {
   try {
     const page = parseInt(req.query.page as string) || 1;
-    const limit = parseInt(req.query.limit as string) || 15;
+    const limit = parseInt(req.query.limit as string) || 30;
 
     const { allTheCompanies, totalPages } = await getAllCompaniesService(
       page,
@@ -88,8 +88,10 @@ export const createCompany = async (
     topInvestors,
     lastFundingType,
     lastFundingAmount,
+    totalFundingEquity,
     numberOfEmployees,
     headquartersLocation,
+    competitors,
     foundedDate,
   } = req.body;
 
@@ -102,8 +104,10 @@ export const createCompany = async (
       topInvestors,
       lastFundingType,
       lastFundingAmount,
+      totalFundingEquity,
       numberOfEmployees,
       headquartersLocation,
+      competitors,
       foundedDate,
     });
     res.status(201).json({

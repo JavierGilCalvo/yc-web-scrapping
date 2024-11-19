@@ -13,9 +13,14 @@ export interface CompanyAttributes {
   topInvestors: string;
   lastFundingType: string;
   lastFundingAmount: number;
+  lastFundingAmountSymbol: string;
+  totalFundingEquity: number;
+  totalFundingEquitySymbol: string;
   numberOfEmployees: string;
   headquartersLocation: string;
+  competitors: number;
   foundedDate: Date;
+  logoUrl?: string; // Añadir logoUrl como opcional
 }
 
 export class Company
@@ -30,9 +35,14 @@ export class Company
   public topInvestors!: string;
   public lastFundingType!: string;
   public lastFundingAmount!: number;
+  public lastFundingAmountSymbol!: string;
+  public totalFundingEquity!: number;
+  public totalFundingEquitySymbol!: string;
   public numberOfEmployees!: string;
   public headquartersLocation!: string;
+  public competitors!: number;
   public foundedDate!: Date;
+  public logoUrl?: string; // Añadir logoUrl como opcional
 }
 
 export interface ScoreAttributes {
@@ -96,10 +106,15 @@ export interface CompanyData {
   Description: string;
   "Top 5 Investors": string;
   "Last Funding Type": string;
-  "Last Funding Amount": number;
+  "Last Funding Amount": string;
+  "Last Funding Amount Symbol": string;
+  "Total Funding Equity": string;
+  "Total Funding Equity Symbol": string;
   "Number of Employees": string;
   "Headquarters Location": string;
+  Competitors: number;
   "Founded Date": Date;
+  "Logo URL"?: string; // Añadir Logo URL como opcional
 }
 
 // Define el tipo para los datos de las puntuaciones

@@ -38,6 +38,18 @@ Company.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    lastFundingAmountSymbol: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    totalFundingEquity: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    totalFundingEquitySymbol: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     numberOfEmployees: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -46,19 +58,28 @@ Company.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    competitors: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     foundedDate: {
       type: DataTypes.DATE,
       allowNull: false,
+    },
+    logoUrl: {
+      // Añadir el nuevo campo logoUrl
+      type: DataTypes.STRING,
+      allowNull: true, // Puedes ponerlo en `true` si el logo es opcional
     },
   },
   {
     sequelize,
     modelName: "Company",
-    indexes: [
+    /**indexes: [
       { fields: ["name"], unique: true }, // Índice único en nombre
       { fields: ["industries"] }, // Índice en industrias
       { fields: ["headquartersLocation"] }, // Índice en ubicación
-    ],
+    ],**/
   }
 );
 

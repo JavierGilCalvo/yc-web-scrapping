@@ -8,6 +8,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DollarSign, Users, CalendarDays, Trophy } from "lucide-react";
 import { formatDateToMonthYear, industryEquivalence } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
 
 /**
  * ICONOS:
@@ -18,6 +19,7 @@ import { formatDateToMonthYear, industryEquivalence } from "@/lib/utils";
  */
 export function CompanyCard({
   name,
+  logoUrl,
   industries,
   description,
   lastFundingType,
@@ -27,6 +29,7 @@ export function CompanyCard({
   numberOfEmployees,
 }: {
   name: string;
+  logoUrl: string;
   industries: string;
   description: string;
   lastFundingType: string;
@@ -41,8 +44,10 @@ export function CompanyCard({
         <div className="flex flex-row w-full items-center gap-6">
           <div className="items-center align-middle">
             <Avatar className="w-[72px] h-[72px]">
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarImage src={`${logoUrl}.png`} alt="@shadcn" />
+              <AvatarFallback>
+                <Skeleton className="w-[72px] h-[72px] rounded-full" />
+              </AvatarFallback>
             </Avatar>
           </div>
           <div className="flex flex-col space-y-1.5 gap-2">
@@ -60,17 +65,21 @@ export function CompanyCard({
             <div className=" grid grid-cols-[1fr_1fr] items-center space-y-1.5 gap-4">
               <div className="flex flex-row w-[150px] items-center gap-2">
                 <div className="flex flex-row  gap-2">
-                  {industries.split(",").map((industry: string) => {
-                    const trimmedIndustry =
-                      industryEquivalence[
-                        industry.trim() as keyof typeof industryEquivalence
-                      ] || industry.trim();
-                    return (
-                      <p className="inline-flex items-center text-neutral-800 text-xs bg-gray-200 border rounded-sm px-2 py-1 leading-none">
-                        {trimmedIndustry.toUpperCase()}
-                      </p>
-                    );
-                  })}
+                  {industries
+                    .split(",")
+                    .map((industry: string, index: number) => {
+                      if (index < 4) {
+                        const trimmedIndustry =
+                          industryEquivalence[
+                            industry.trim() as keyof typeof industryEquivalence
+                          ] || industry.trim();
+                        return (
+                          <p className="inline-flex items-center text-neutral-800 text-xs bg-gray-200 border rounded-sm px-2 py-1 leading-none">
+                            {trimmedIndustry.toUpperCase()}
+                          </p>
+                        );
+                      }
+                    })}
                 </div>
               </div>
               <div className=" grid grid-cols-[1fr_1fr_1fr_1fr] items-center gap-4">

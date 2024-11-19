@@ -1,4 +1,6 @@
 import Company from "../models/Company";
+import { Op } from "sequelize";
+import { getIndustriesToFilter, industryMappingType } from "../utils/utils";
 
 /**
  * Retrieves all companies from the database.
@@ -8,11 +10,21 @@ import Company from "../models/Company";
  */
 export const getAllCompaniesService = async (
   page: number,
-  limit: number
+  limit: number,
+  industries: (keyof industryMappingType)[] // Industrias seleccionadas
 ): Promise<{ allTheCompanies: Company[]; totalPages: number }> => {
   const offset = (page - 1) * limit;
+
+  // Obtener las industrias a filtrar
+  const industriesToFilter = getIndustriesToFilter(industries);
+
   const { rows: allTheCompanies, count: totalItems } =
     await Company.findAndCountAll({
+      where: {
+        industries: {
+          [Op.in]: industriesToFilter, // Filtrar por industrias
+        },
+      },
       limit,
       offset,
     });

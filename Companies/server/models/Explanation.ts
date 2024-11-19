@@ -50,11 +50,12 @@ const Explanation = sequelize.define(
   },
   {
     freezeTableName: true, // Evita que Sequelize pluralice el nombre de la tabla
-    indexes: [
+    modelName: "Explanation",
+    /**indexes: [
       { fields: ["marketSize"] }, // Índice en tamaño de mercado
       { fields: ["industryRelevance"] }, // Índice en relevancia de la industria
       { fields: ["companyId"] }, // Índice en la clave foránea de empresa
-    ],
+    ],**/
   }
 );
 

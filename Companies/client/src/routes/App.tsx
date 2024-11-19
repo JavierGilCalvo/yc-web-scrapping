@@ -25,6 +25,7 @@ export default function App() {
               <TableRow key={company.id}>
                 <CompanyCard
                   name={company.name}
+                  logoUrl={company.logoUrl}
                   industries={company.industries}
                   description={company.description}
                   headquartersLocation={company.headquartersLocation}

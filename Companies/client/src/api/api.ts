@@ -6,7 +6,7 @@ const api = axios.create({
 });
 
 // Companies Information
-export const getCompanies = (page = 1, limit = 15) =>
+export const getCompanies = (page = 1, limit = 30) =>
   api.get("/companies", { params: { page, limit } });
 export const getCompanyInfo = (companyId: number) =>
   api.get(`/companies/${companyId}`);

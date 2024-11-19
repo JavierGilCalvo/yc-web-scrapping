@@ -54,11 +54,12 @@ const Score = sequelize.define(
   },
   {
     freezeTableName: true, // Evita que Sequelize pluralice el nombre de la tabla
-    indexes: [
+    modelName: "Score",
+    /**  indexes: [
       { fields: ["marketSize"] }, // Índice en tamaño de mercado
       { fields: ["innovationLevel"] }, // Índice en nivel de innovación
       { fields: ["companyId"] }, // Índice en la clave foránea de empresa
-    ],
+    ],*/
   }
 );
 
