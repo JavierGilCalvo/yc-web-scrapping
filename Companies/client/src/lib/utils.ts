@@ -14,6 +14,7 @@ export function formatDateToMonthYear(dateString: string) {
 }
 
 export const industryFilterList = [
+  "All Industries",
   "Business",
   "Internet",
   "Social",

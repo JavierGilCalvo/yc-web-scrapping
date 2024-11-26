@@ -1,10 +1,11 @@
 export const getIndustriesToFilter = (
   industries: (keyof industryMappingType)[]
 ) => {
-  const industriesToFilter: string[] = [];
+  let industriesToFilter: string[] = [];
   if (industries.length > 0) {
     industries.forEach((industry) => {
-      industriesToFilter.concat(industryMapping[industry]);
+      console.log(industryMapping[industry]);
+      industriesToFilter = industriesToFilter.concat(industryMapping[industry]);
     });
   } else {
     industriesToFilter.concat(Object.values(industryMapping).flat());
@@ -52,7 +53,7 @@ export type industryMappingType = {
   Marketing: string[];
 };
 
-const industryMapping: industryMappingType = {
+export const industryMapping: industryMappingType = {
   Business: [
     "Subscription Service",
     "Real Time",

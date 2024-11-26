@@ -1,8 +1,10 @@
 // hooks/useCompanies.js
 import { useState, useEffect } from "react";
 import { getCompanies } from "@/api/api";
+import { useFilters } from "./useFilters";
 
 export const useCompanies = () => {
+  const { filters } = useFilters();
   const [companies, setCompanies] = useState([]);
   const [loadingCompanies, setLoading] = useState(true);
   const [errorCompanies, setError] = useState(null);
@@ -25,7 +27,7 @@ export const useCompanies = () => {
     };
 
     fetchCompanies();
-  }, [page]);
+  }, [page, filters]);
 
   const nextPage = () =>
     setPage((prevPage) => Math.min(prevPage + 1, totalPages));

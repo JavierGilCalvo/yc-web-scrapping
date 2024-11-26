@@ -36,7 +36,7 @@ const seedDatabase = async () => {
     // File paths
     const companiesFilePath = path.join(
       __dirname,
-      "../data/crunchbase_companies_cleaned.csv"
+      "../data/crunchbase_companies_processed.csv"
     );
 
     // Parse the CSV files

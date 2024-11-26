@@ -3,8 +3,6 @@ import {
   Trophy,
   Users,
   Calendar,
-  Home,
-  Inbox,
   Search,
   Settings,
 } from "lucide-react";
@@ -19,41 +17,58 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import { title } from "process";
+
+import { FundingAmountFilter } from "@/components/ui/filters/FundingAmountFilter";
+import { NumberEmployeesFilter } from "@/components/ui/filters/NumberEmployeesFilter";
+import { CompetitorsFilter } from "@/components/ui/filters/CompetitorsFilter";
+import { LastFundingTypeFilter } from "@/components/ui/filters/LastFundingTypeFilter";
 
 // Menu items.
 const items = [
   {
     title: "Industry",
-    url: "#",
+    component: () => <div>Industry Filter</div>, // Si es necesario, renderiza algo específico
     icon: Settings,
   },
   {
     title: "Last Funding Type",
-    url: "#",
+    component: LastFundingTypeFilter, // Representa dinámicamente
     icon: Trophy,
   },
   {
     title: "Last Funding Amount",
-    url: "#",
+    component: FundingAmountFilter, // Componente React dinámico
     icon: DollarSign,
   },
   {
     title: "Number of Employees",
-    url: "#",
+    component: NumberEmployeesFilter,
     icon: Users,
   },
   {
     title: "Number of Competitors",
-    url: "#",
+    component: CompetitorsFilter,
     icon: Search,
   },
   {
     title: "Founding Date",
-    url: "#",
+    component: () => <div>Founding Date Filter</div>,
     icon: Calendar,
   },
 ];
+/**
+ Last Funding Amount:
+ Min: 0
+ Max: 468000000
+
+ Total Funding Equity:
+ Min: 0
+ Max: 973000000
+
+ Competitors:
+ Min: 0
+ Max: 775
+ */
 
 export function AppSidebar() {
   return (
@@ -66,10 +81,11 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                      {item.component && <item.component />}
+                    </>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}

@@ -7,7 +7,7 @@ import {
   getCompanyService,
   updateCompanyService,
 } from "../services/companyServices";
-
+import { industryMapping, industryMappingType } from "../utils/utils";
 /**
  * Retrieves all companies from the database.
  *
@@ -28,7 +28,8 @@ export const getAllCompanies = async (
 
     const { allTheCompanies, totalPages } = await getAllCompaniesService(
       page,
-      limit
+      limit,
+      Object.keys(industryMapping) as (keyof industryMappingType)[]
     );
     return res.status(200).json({ allTheCompanies, totalPages });
   } catch (error) {
@@ -96,6 +97,7 @@ export const createCompany = async (
   } = req.body;
 
   try {
+    /** 
     await Company.create({
       name,
       industries,
@@ -109,7 +111,7 @@ export const createCompany = async (
       headquartersLocation,
       competitors,
       foundedDate,
-    });
+    }); */
     res.status(201).json({
       message: "New company created",
     });
